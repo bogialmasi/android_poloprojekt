@@ -5,18 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class NewActivity extends AppCompatActivity {
+public class NewActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new);
+        setContentView(R.layout.activity_new2);
 
-        TextView kektxt = findViewById(R.id.kektxt);
+        TextView pirostxt = findViewById(R.id.pirostxt);
         Bundle extras = getIntent().getExtras();
 
         if (extras != null) {
-            kektxt.setText(extras.getString("atadkek") + " póló megvéve!");
+            pirostxt.setText(extras.getString("atadpiros") + " póló megvéve!");
         }
     }
 }

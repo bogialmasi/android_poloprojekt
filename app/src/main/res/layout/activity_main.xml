@@ -29,6 +29,7 @@
         android:id="@+id/pirostxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Piros"
         android:layout_below="@id/piros"/>
 
@@ -49,21 +50,21 @@
         android:layout_below="@id/pirosgomb"
         android:layout_centerHorizontal="true"/>
 
-
     <TextView
         android:id="@+id/kektxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Kék"
+        android:layout_below="@id/kek"/>
 
-        />
 
     <Button
         android:id="@+id/kekgomb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/kek"
+        android:layout_below="@id/kektxt"
         android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
         android:text="Kéket veszek!"
          />
 

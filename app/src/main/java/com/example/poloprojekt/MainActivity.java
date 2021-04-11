@@ -17,23 +17,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView text = findViewById(R.id.text);
+        TextView pirostxt = findViewById(R.id.pirostxt);
+        TextView kektxt = findViewById(R.id.kektxt);
         Button kekgomb = findViewById(R.id.kekgomb);
         Button pirosgomb = findViewById(R.id.pirosgomb);
 
-        kekgomb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, NewActivity.class);
-                //i.putExtra("atad", text1.getText().toString());
-                startActivity(i);
-            }
-        });
-
+        // PIROS
         pirosgomb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, NewActivity2.class);
-                //i.putExtra("atad", text1.getText().toString());
+                i.putExtra("atadpiros", pirostxt.getText().toString());
+                startActivity(i);
+            }
+        });
+
+        // KÉK
+        kekgomb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, NewActivity.class);
+                i.putExtra("atadkek", kektxt.getText().toString());
                 startActivity(i);
             }
         });
