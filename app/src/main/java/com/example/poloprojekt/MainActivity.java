@@ -15,10 +15,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText text1 = findViewById(R.id.text1);
-        Button button = findViewById(R.id.button);
+        EditText text = findViewById(R.id.text);
+        Button kekgomb = findViewById(R.id.kekgomb);
+        Button pirosgomb = findViewById(R.id.pirosgomb);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        kekgomb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SecondActivity.class);
+                i.putExtra("atad", text1.getText().toString());
+                startActivity(i);
+            }
+        });
+
+        pirosgomb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, SecondActivity.class);

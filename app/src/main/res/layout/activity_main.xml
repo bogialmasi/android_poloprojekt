@@ -25,6 +25,7 @@
         android:layout_below="@id/text"
         />
 
+
     <Button
         android:id="@+id/pirosgomb"
         android:layout_width="wrap_content"
