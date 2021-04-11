@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,15 +16,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText text = findViewById(R.id.text);
+        TextView text = findViewById(R.id.text);
         Button kekgomb = findViewById(R.id.kekgomb);
         Button pirosgomb = findViewById(R.id.pirosgomb);
 
         kekgomb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, SecondActivity.class);
-                i.putExtra("atad", text1.getText().toString());
+                Intent i = new Intent(MainActivity.this, NewActivity.class);
+                //i.putExtra("atad", text1.getText().toString());
                 startActivity(i);
             }
         });
@@ -31,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         pirosgomb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, SecondActivity.class);
-                i.putExtra("atad", text1.getText().toString());
+                Intent i = new Intent(MainActivity.this, NewActivity2.class);
+                //i.putExtra("atad", text1.getText().toString());
                 startActivity(i);
             }
         });
